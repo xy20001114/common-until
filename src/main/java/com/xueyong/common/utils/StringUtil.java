@@ -3,6 +3,7 @@ package com.xueyong.common.utils;
 
 
 import java.io.UnsupportedEncodingException;
+import java.text.NumberFormat;
 import java.util.Random;
 
 /**
@@ -19,7 +20,7 @@ public class StringUtil {
 	 * @return: boolean      
 	 * @throws
 	 */
-	public static boolean hasText(String str) {
+	public static boolean isNull(String str) {
 		if(str==null) {
 			return true;
 		}
@@ -39,7 +40,7 @@ public class StringUtil {
 	 * @throws
 	 */
 	public static boolean isNotNull(String str) {
-		return !hasText(str);
+		return !isNull(str);
 	}
 	/**
 	 * @Title: isPhoneNum   
@@ -74,7 +75,7 @@ public class StringUtil {
 	 * @throws
 	 */
 	public static boolean isLetter(String str) {
-		if(hasText(str)) {
+		if(isNull(str)) {
 			return false;
 		}
 		str = str.toLowerCase();
@@ -237,4 +238,13 @@ public class StringUtil {
 		System.out.println(randomChineseName());
 	}
 
+	//百分比计算
+	public static String getPercent(int current,int total) {
+		//创建数值格式化对象
+		NumberFormat numberFormat = NumberFormat.getInstance(); 
+		//设置精确小数点后两位
+		numberFormat.setMaximumFractionDigits(2);  
+		String results = numberFormat.format((float)current/(float)total * 100);
+		return results;
+	}
 }

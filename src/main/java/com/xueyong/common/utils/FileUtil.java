@@ -29,7 +29,7 @@ public class FileUtil {
 	 * @throws
 	 */
 	public static String getExtName(String str) {
-		if(StringUtil.hasText(str)) {
+		if(StringUtil.isNull(str)) {
 			return null;
 		}
 		if(!str.contains(".")) {

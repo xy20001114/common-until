@@ -1,5 +1,4 @@
-com\xueyong\common\utils\DataUtil.class
-com\xueyong\common\utils\FileUtil.class
 com\xueyong\common\utils\StringUtil.class
+com\xueyong\common\utils\FileUtil.class
 com\xueyong\common\utils\StreamUtil.class
 com\xueyong\common\utils\RandomUtil.class
